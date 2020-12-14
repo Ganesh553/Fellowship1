@@ -11,33 +11,6 @@ public class AddressBook {
 		public void addingNewPerson(Person obj) {
 			al.add(obj);
 		}
-		
-		public void deletingPerson(String FirstName) {
-			if(al.isEmpty())
-				System.out.println("No Address Present");
-			else {
-			for(Person obj:al) {
-				if(obj.getFirstName().equals(FirstName))
-				{
-					al.remove(obj);
-					System.out.println("Deleted is Successful");
-					break;
-				}
-			}
-			}
-		}
-		
-		public void display() {
-			if(al.isEmpty())
-				System.out.println("No Address Present");
-			else {
-			for(Person obj : al) {
-				System.out.print("FirstName: "+ obj.getFirstName()+" LastName: " + obj.getLastName()+" Address: " + obj.getAddress()+" City: "+ obj.getCity()+" State: " + obj.getState()+" Zip: " + obj.getZip()+" phoneNumber: " + obj.getPhoneNumber());
-				System.out.println();
-			}
-			}
-		}
-
 		public void editingPerson(String editName) {			 
 			boolean flag=true;
 			for(Person obj : al) {
@@ -88,67 +61,6 @@ public class AddressBook {
 									 flag=true;
 								 else 
 									 flag=false;
-						}
-					}
-				}
-			}
-		}
-
-		public void duplicatEntry() {
-			if(al.isEmpty())
-				System.out.println("No element in Address Book");
-			else {
-				for(Person obj : al) {
-					System.out.println("Enter First name");
-					String firstName = sc.next();
-					if (obj.getFirstName().equals(firstName))
-					{
-						System.out.println("Dublicate entry is not allowed");
-						break;
-					}
-						
-				}		
-				
-			}	
-		}
-
-		public void searchState(String searchState) {
-			if(al.isEmpty())
-				System.out.println("No Address Present");
-			else {
-			for(Person obj:al) {
-				if(obj.getState().equals(searchState))
-					System.out.println(obj.getFirstName());
-			}
-			}
-			
-		}
-
-		public void searchCity(String searchCity) {
-			if(al.isEmpty())
-				System.out.println("No Address Present");
-			else {
-			for(Person obj:al) {
-				if(obj.getCity().equals(searchCity))
-					System.out.println(obj.getFirstName());
-			}
-			}
-		}
-
-		public void searchPerson(String searchName) {
-			if(al.isEmpty())
-				System.out.println("No Address is Present");
-			else {
-				for(Person obj:al) {
-					if(obj.getFirstName().equals(searchName)) {
-						System.out.println("Select 1. For State");
-						System.out.println("Select 2. For City");
-						int select = sc.nextInt();
-						switch(select) {
-						case 1: System.out.println(obj.getState());
-								break;
-						case 2: System.out.println(obj.getCity());
-								break;
 						}
 					}
 				}
