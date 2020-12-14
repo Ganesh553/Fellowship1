@@ -40,33 +40,7 @@ public class AddressBookMain {
 					Person person = new Person(firstName,lastName,address,city,state,zip,phoneNumber);
 					ab.addingNewPerson(person);
 					break;
-			case 2: System.out.println("Editing Person");
-			        System.out.println("Enter the firstName of the Person that you wish to edit");
-			        String editName=sc.next();
-			        ab.editingPerson(editName);
-			        break;
-			case 3: System.out.println("Deleting Person");
-					System.out.println("Enter the firstName of the person that you wish to delete");
-					String deleteName=sc.next();
-					ab.deletingPerson(deleteName);
-					break;
-			case 4: System.out.println("Displaying all the contacts ");
-					ab.display();
-					break;
-			case 5: System.out.println("Enter the First name to check duplicate");
-					ab.duplicatEntry();
-					break;
-			case 6: System.out.println("Enter the State to see the person");
-					String searchState=sc.next();
-					ab.searchState(searchState);
-					break;
-			case 7: System.out.println("Enter the City to see the person");
-					String searchCity=sc.next();
-					ab.searchCity(searchCity);
-					break;
-			case 8: System.out.println("Enter the Person");
-					String searchName = sc.next();
-					ab.searchPerson(searchName);
+			default: System.out.println("your not selected between 1 to 9");
 			
 			}
 			System.out.println("Do you wish to continue y/n");

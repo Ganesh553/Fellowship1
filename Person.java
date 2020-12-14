@@ -1,6 +1,6 @@
 package Assignment;
 
-public class Person  {
+public class Person implements Comparable<Person>  {
 	
 	private String firstName;
 	private String lastName;
@@ -70,9 +70,10 @@ public class Person  {
 				+ ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + "]";
 	}
 	
-//	public int compareTo(Person obj) {
-//		return this.firstName.compareTo(obj.firstName);
-//	}
 
+	@Override
+	public int compareTo(Person o) {
+		return this.firstName.compareTo(o.firstName);
+	}
+	
 }
-
